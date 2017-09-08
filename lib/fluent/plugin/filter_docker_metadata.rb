@@ -62,7 +62,7 @@ module Fluent
           es.each {|time, record|
             record['docker'] = {
               'name' => metadata['Name'][1..-1],
-              'image' => metadata['Config']['Image'],
+              'image' => metadata['Config']['Image']
             }
             new_es.add(time, record)
           }
